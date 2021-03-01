@@ -1,8 +1,9 @@
 # Kuard Deployments
 
-On this directory, multiple ways to deployment kuard application.
+On this directory, multiple ways to deploy kuard application using deployment.apps K8s construct.
+You might want to expose the kuard service using your ingress controller of choice.
 
-## Simplest deployment
+## Simplest
 
 Create one deployment under `kuard-example` namespace with one pod replica, with ClusterIP service.
 
@@ -12,7 +13,9 @@ kubectl apply -f kuard.yaml
 kubectl get pods -n kuard-example
 ```
 
-Expose the service using your ingress controller of choice. Example if using OpenShift:
+## Exposing the Service: OpenShift
+
+Example if using OpenShift:
 
 ```
 # if openshift
